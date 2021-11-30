@@ -23,7 +23,7 @@ async def main():
         for endpoint, url in endpoints:
             result = http_client.post(url, json={"jsonrpc": "2.0", "id": 1, "method": "getSlot"}, timeout=1)
             results.append((result, endpoint))
-        print(now.strftime("%m/%d/%Y, %H:%M:%S"))
+        print(now.strftime("%Y/%m/%d, %H:%M:%S"))
         for result, endpoint in results:
             try:
                 result = await result
