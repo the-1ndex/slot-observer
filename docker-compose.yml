@@ -1,0 +1,7 @@
+version: "3.3"
+services:
+  observer:
+    build: .
+    restart: always
+    environment:
+      - STATSD_HOST
